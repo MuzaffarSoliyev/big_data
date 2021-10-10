@@ -1,0 +1,19 @@
+1. hdfs dfs /my_folder_name
+2. hdfs dfs /my_folder_name/my_folder_name_1
+3. Trash - это специальная директория в которую премещаются данные в случае удаления. Чтобы файлы туда не попадали, а сразу удалялись сразу нужно вводить следующую команду. Например нужно удалить файл test.txt в корневой папке:   hdfs dfs -rm -r -skipTrash /test.txt
+4. hdfs dfs -touchz /my_folder_name/my_folder_name_1/my_file.txt
+5. hdfs dfs -rm -r -skipTrash /my_folder_name/my_folder_name_1/my_file.txt
+6. hdfs dfs -rm -r /my_folder_name
+
+1. hdfs dfs -mkdir /new_folder;
+   hdfs dfs -put test.txt /new_folder
+2. hdfs dfs -cat /new_folder/test.txt
+3. hdfs dfs -tail /new_folder/test.txt
+4. hdfs dfs -head /new_folder/test.txt
+5. hdfs dfs -cp /new_folder/test.txt /
+
+2. hdfs dfs -setrep -w 2 /test.txt
+   hdfs dfs -setrep -w 3 /test.txt
+3. hdfs fsck /test.txt -files -blocks -locations
+4. hdfs fsck -blockId blk_1073741827
+   
